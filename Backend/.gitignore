@@ -1,0 +1,25 @@
+
+# Node.js dependencies
+node_modules/
+# Production build output
+dist/  
+# Environment files     
+.env
+# macOS files
+.DS_Store
+# IDE files
+.vscode/
+# Test coverage and logs
+coverage/
+# Logs
+npm-debug.log
+yarn-error.log
+# JetBrains IDEs
+.idea/
+*.log
+
+# TypeScript build info
+*.tsbuildinfo
+
+# Build outputs
+build/  
