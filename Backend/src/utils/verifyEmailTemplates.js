@@ -51,19 +51,3 @@ const verifyEmailTemplate = ({name, url}) => {
 
 export default verifyEmailTemplate;
 
-
-// const verifyEmailTemplate = (name ,url ) => {
-//     return `
-//      <p>Dear ${name} </p>
-//      <p>Please verify your email address by clicking the link below:</p>
-//      <a href=${url} style="color:white;background : blue; margin-top : 10px " >Verify Email</a>
-//      <p>If you did not request this, please ignore this email.</p>
-//      <p>Thank you!</p>
-//     `
-// }
-
-
-// export default verifyEmailTemplate
-
-
-
