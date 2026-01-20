@@ -5,12 +5,14 @@ dotenv.config();
 import helmet from "helmet";
 import morgan from "morgan";
 import cookieParser from "cookie-parser";
-import connectDB from './db/db.js'
+
 import userRouter from "../src/routes/user.routes.js"
+import categoryRouter from "./routes/category.routes.js";
+import uploadRoutes from "./routes/upload.routes.js";
 
 
 
-const app = express();
+const app = express(); 
 
 app.use(
     cors({
@@ -30,10 +32,13 @@ app.use(
 );
 
 app.use(morgan());
-connectDB()
+
 
 
 app.use("/api/user",userRouter)
+app.use("/api/category",categoryRouter)
+app.use("/api/file",uploadRoutes)
+
 
 export default app;
 

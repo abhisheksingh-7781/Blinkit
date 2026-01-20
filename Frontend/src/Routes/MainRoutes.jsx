@@ -1,4 +1,3 @@
-
 import { Route, Routes } from 'react-router-dom'
 import Home from '../pages/Home'
 import SearchPage from '../pages/SearchPage'
@@ -12,6 +11,10 @@ import Dashbord from '../Layouts/Dashbord'
 import Profile from '../pages/Profile'
 import MyOrder from '../pages/MyOrder'
 import Address from '../pages/Address'
+import Category from '../pages/Category'
+import SubCategory from '../pages/SubCategory'
+import UploadProduct from '../pages/UploadProduct'
+import ProductAdmin from '../pages/ProductAdmin'
 
 
 const MainRoutes = () => {
@@ -32,6 +35,10 @@ const MainRoutes = () => {
             <Route path="profile" element={<Profile />} />
             <Route path="myorder" element={<MyOrder />} />
             <Route path="address" element={<Address />} />            
+            <Route path="product" element={<ProductAdmin />} />            
+            <Route path="category" element={<Category />} />            
+            <Route path="subcategory" element={<SubCategory />} />            
+            <Route path="upload-Product" element={<UploadProduct />} />            
         </Route>
        
 

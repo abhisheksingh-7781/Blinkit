@@ -34,12 +34,12 @@ const Header = () => {
   }
 
   return (
-    <header className="h-26 lg:h-20  lg:shadow-md  bg-white flex  flex-col justify-center gap-2">
+    <header className="h-26 lg:h-20 sticky top-0 z-4  bg-white flex  flex-col justify-center gap-4  lg:shadow-md">
       {!(isSearch && isMobile) && (
         <div className="container mx-auto flex items-center  px-4 justify-between">
           {/* Logo */}
           <div className="h-full">
-            <Link to={"/"} className="h-full flex justify-center items-center">
+            <Link to={"/"} className="h-full flex justify-center items-center ">
               <img
                 src={logo}
                 width={170}

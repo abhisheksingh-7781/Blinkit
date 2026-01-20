@@ -7,11 +7,13 @@ const Dashbord = () => {
  
    <section className="bg-white">
     <div className=" container mx-auto p-5 grid lg:grid-cols-[250px_1fr] gap-6">
-          <div className="py-4 sticky top-24px overflow-auto hidden lg:block">
+
+         {/* left for menu */}
+          <div className=" max-h-[calc(100vh-96px)] py-4 sticky top-24 overflow-auto hidden lg:block border-r border-neutral-400">
             <UserMenu/>
           </div>
-
-          <div className="bg-white p-4 ">
+            {/* right for content  */}
+          <div className=" min-h-[70vh] lg:min-h-[74vh]  ">
               <Outlet/>
           </div>
     </div>

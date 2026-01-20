@@ -7,7 +7,7 @@ import Axios from "../utils/Axios.config";
 import Divider from "./Divider";
 import { FiExternalLink } from "react-icons/fi";
 
-const UserMenu = ({close}) => {
+const UserMenu = ({ close }) => {
   const dispatch = useDispatch();
   const user = useSelector((state) => state?.user);
 
@@ -29,37 +29,85 @@ const UserMenu = ({close}) => {
     }
   };
 
-    const hendleClose=()=>{
-      if(close){
-        close()
-       }
+  const hendleClose = () => {
+    if (close) {
+      close();
     }
+  };
 
   return (
     <div>
       <div className=" font-semibold ">MY Account</div>
       <div className="text-bold flex items-center gap-2  ">
-        <span className="max-w-52 line-clamp-1">{user.name || user.mobile}</span>
-        <Link onClick={hendleClose} to={"/dashboard/profile" } className=" hover:text-amber-300">
+        <span className="max-w-52 line-clamp-1">
+          {user.name || user.mobile}
+        </span>
+        <Link
+          onClick={hendleClose}
+          to={"/dashboard/profile"}
+          className=" hover:text-amber-300"
+        >
           <FiExternalLink />
         </Link>
       </div>
       <Divider />
       <div className="text-sm grid gap-2 ">
-        <Link onClick={hendleClose} to={"/dashboard/myorder"} className="px-2">
+        <Link
+          onClick={hendleClose}
+          to={"/dashboard/category"}
+          className="px-2 hover:bg-orange-200 hover:font-bold rounded hover:text-neutral-500"
+        >
+          Category
+        </Link>
+
+        <Link
+          onClick={hendleClose}
+          to={"/dashboard/subcategory"}
+          className="px-2 hover:bg-orange-200 hover:font-bold rounded hover:text-neutral-500"
+        >
+          Sub Category
+        </Link>
+
+        <Link
+          onClick={hendleClose}
+          to={"/dashboard/upload-Product"}
+          className="px-2 hover:bg-orange-200 hover:font-bold rounded hover:text-neutral-500"
+        >
+          Upload Product
+        </Link>
+
+        <Link
+          onClick={hendleClose}
+          to={"/dashboard/product"}
+          className="px-2 hover:bg-orange-200 hover:font-bold rounded  hover:text-neutral-500"
+        >
+          Product
+        </Link>
+
+        <Link
+          onClick={hendleClose}
+          to={"/dashboard/myorder"}
+          className="px-2 hover:bg-orange-200 hover:font-bold rounded hover:text-neutral-500"
+        >
           MY Order
         </Link>
-        <Link onClick={hendleClose} to={"/dashboard/address"} className="px-2">
-          MY Address
+        <Link
+          onClick={hendleClose}
+          to={"/dashboard/address"}
+          className="px-2 hover:bg-orange-200 hover:font-bold rounded hover:text-neutral-500"
+        >
+          Save Address
         </Link>
         <button
           onClick={logoutHandler}
-          className="text-left  px-2 hover:bg-red-300"
-        > LogOut</button>
-        
+          className="text-left  px-2 py-1  hover:bg-red-400 hover:font-bold rounded hover:text-neutral-500 "
+        >
+          {" "}
+          LogOut
+        </button>
       </div>
     </div>
   );
-};
+};   
 
-export default UserMenu;
+export default UserMenu;         

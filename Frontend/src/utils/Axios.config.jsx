@@ -3,7 +3,7 @@ import axios from "axios"
  const instance = axios.create({
      baseURL: "http://localhost:3000/api",
      withCredentials: true,
-     timeout: 10000,
+    //  timeout: 10000,
  })
 
  // sending access Token in the header 
